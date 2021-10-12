@@ -6,5 +6,9 @@
 package com.calculator.interfaces;
 
 public interface Operation {
+<<<<<<< HEAD
     Double operate(Double num_1, Double num_2) throws Exception;
+=======
+    Double operate(Double num_1, Double num_2)throws Exception;
+>>>>>>> cab0124a39785081163ec0e093814cff56046a06
 }
