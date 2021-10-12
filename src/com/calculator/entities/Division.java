@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package com.calculator.entities;
+import com.calculator.exceptions.ExceptionDivision;
 import com.calculator.interfaces.Operation;
 /**
  *
@@ -12,8 +13,15 @@ import com.calculator.interfaces.Operation;
 public class Division implements Operation{
 
     @Override
-    public Double operate(Double num_1, Double num_2) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Double operate(Double num_1, Double num_2) throws ExceptionDivision {
+      try{
+          return (num_1/num_2);
+      }catch(ArithmeticException  e ){
+          System.out.println(e.getMessage());
+          throw ExceptionDivision.divisionByZero();
+      }
+    
+      
     }
     
 }
