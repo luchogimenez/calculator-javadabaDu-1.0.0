@@ -14,8 +14,10 @@ import com.calculator.entities.Add;
 public class Calculator {
     private static Calculator gestor;
     private Add operationAdd;
-
-   private Calculator() {
+    private Sub operationSub;
+    private Calculator() {
+        this.operationAdd=new Add();
+        this.operationSub= new Sub();
     }
     
     public static Calculator getCalculator(){
@@ -27,5 +29,9 @@ public class Calculator {
 
     public Add getAdd() {
         return operationAdd;
+    }
+
+    public Sub getSub() {
+        return operationSub;
     }
 }
