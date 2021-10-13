@@ -5,24 +5,24 @@
  */
 package com.calculator.entities;
 
+import com.calculator.exceptions.ExceptionByZero;
 import com.calculator.interfaces.Operation;
+import com.calculator.util.Validation;
 
 /**
  *
  * @author Lucho
  */
-public class Power implements Operation{
+public class Power implements Operation {
 
     @Override
-    public Double operate(Double num_1, Double num_2) throws Exception {
-        Double power = null;
-        try{
-            power = Math.pow(num_1,num_2);
-        }catch(Exception e){
+    public Double operate(Double base, Double exponent) throws Exception {
+        try {
+            Validation.checkByTwoZeros(base, exponent);
+        } catch (ExceptionByZero e) {
             System.out.println(e.getMessage());
+            throw ExceptionByZero.indeterminatedZeroToZero();
         }
-        return power;
-        
+        return Math.pow(base, exponent);
     }
-    
 }

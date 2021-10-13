@@ -5,6 +5,7 @@
  */
 package com.calculator.entities;
 
+import com.calculator.exceptions.ExceptionByZero;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -17,8 +18,9 @@ import static org.junit.Assert.*;
  * @author Lucho
  */
 public class PowerTest {
-    
+    Power instance;
     public PowerTest() {
+        instance = new Power();
     }
     
     @BeforeClass
@@ -43,11 +45,46 @@ public class PowerTest {
     @Test
     public void testOperate() throws Exception {
         System.out.println("operate");
-        Double num_1 = 4.0;
-        Double num_2 = 2.0;
-        Power instance = new Power();
-        Double expResult = 16.0;
-        Double result = instance.operate(num_1, num_2);
+        Double base = 4d;
+        Double exponent = 2d;
+        Double expResult = 16d;
+        Double result = instance.operate(base, exponent);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
+    }
+    @Test
+    public void testOperateBaseZero() throws Exception {
+        System.out.println("operate");
+        Double base = 0d;
+        Double exponent = 2d;
+        Double expResult = 0d;
+        Double result = instance.operate(base, exponent);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
+    }
+    
+    @Test
+    public void testOperateExponentZero() throws Exception {
+        System.out.println("operate");
+        Double base = 8d;
+        Double exponent = 0d;
+        Double expResult = 1d;
+        Double result = instance.operate(base, exponent);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
+    }
+    
+    @Test(expected = ExceptionByZero.class)
+    public void testOperateIndeterminatedZeroToZero() throws Exception {
+        System.out.println("operate");
+        Double base = 0d;
+        Double exponent = 0d;
+        
+        Object expResult = ExceptionByZero.class;
+        Object result = instance.operate(base, exponent);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
