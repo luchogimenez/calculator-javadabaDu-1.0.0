@@ -42,7 +42,7 @@ public class SubTest {
      */
     @Test
     public void testOperateIntegerPositiveNumbers() {
-        System.out.println("Resta de Enteros");
+        System.out.println("Resta de Enteros Psitivos");
         Double num_1 = 25d;
         Double num_2 = 10d;
         Sub instance = new Sub();
@@ -52,5 +52,56 @@ public class SubTest {
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
+    @Test
+    public void testOperateIntegerNegativeNumbers()  {
+        System.out.println("Resta de Enteros Negativos");
+        Double num_1 = -25d;
+        Double num_2 = -10d;
+        Sub instance = new Sub();
+        Double expResult = -15d;
+        Double result = instance.operate(num_1, num_2);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
+    }
+    @Test
+    public void testOperateIntegerNegativePositiveNumbers() {
+        System.out.println("Resta de un numero Entero Positivo y otro Negativo");
+        Double num_1 = -25d;
+        Double num_2 = 10d;
+        Sub instance = new Sub();
+        Double expResult = -35d;
+        Double result = instance.operate(num_1, num_2);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
+    }
+    @Test
+    public void testOperateDecimalPositiveNumbers() {
+ 
+        System.out.println("Resta de numeros Decimales Positivos");
+        Double num_1 = 25.55555d;
+        Double num_2 = 10.55555d;
+        Sub instance = new Sub();
+        Double expResult = 15d;
+        Double result = instance.operate(num_1, num_2);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
+    }
+    @Test
+    public void testOperateDecimalNegativeNumbers() {
+ 
+        System.out.println("Resta de numeros Decimales Negativos");
+        Double num_1 = -25.55555d;
+        Double num_2 = -10.55555d;
+        Sub instance = new Sub();
+        Double expResult = -15d;
+        Double result = instance.operate(num_1, num_2);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
+    }
     
 }
+
