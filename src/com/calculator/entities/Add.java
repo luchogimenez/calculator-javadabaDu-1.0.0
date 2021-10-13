@@ -7,15 +7,12 @@ package com.calculator.entities;
 
 import com.calculator.interfaces.Operation;
 
-/**
- *
- * @author dylan losada
- */
 public class Add implements Operation{
 
     @Override
     public Double operate(Double num_1, Double num_2) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         
+        return (num_1+num_2);
     }
     
 }
