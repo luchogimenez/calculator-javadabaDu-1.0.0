@@ -1,14 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.calculator.entities;
 
-/**
- *
- * @author dylan losada
- */
 import com.calculator.entities.Add;
 
 public class Calculator {
@@ -17,8 +9,13 @@ public class Calculator {
     private Add operationAdd;
     private Division operationDivision;
     private Multiplicate operationMultiplicate;
+    private Sub operationSub;
 
     private Calculator() {
+        this.operationAdd = new Add();
+        this.operationSub = new Sub();
+        this.operationDivision = new Division();
+        this.operationMultiplicate = new Multiplicate();
     }
 
     public static Calculator getCalculator() {
@@ -39,4 +36,9 @@ public class Calculator {
     public Multiplicate getOperationMultiplicate() {
         return operationMultiplicate;
     }
+
+    public Sub getSub() {
+        return operationSub;
+    }
 }
+

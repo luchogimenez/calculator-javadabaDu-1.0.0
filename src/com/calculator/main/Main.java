@@ -10,6 +10,6 @@ import com.calculator.entities.Calculator;
 public class Main {
     public static void main(String[] args){
         Calculator calculator = Calculator.getCalculator();
-        // calculator.getAdd().operate(1, 2);
+       // calculator.getAdd().operate(1, 2);
     }
 }
