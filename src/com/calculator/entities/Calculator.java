@@ -1,21 +1,16 @@
-    /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.calculator.entities;
 
-/**
- *
- * @author dylan losada
- */
+
 import com.calculator.entities.Add;
 
 public class Calculator {
     private static Calculator gestor;
     private Add operationAdd;
+    private Logarithm operationLog;
 
    private Calculator() {
+    this.operationLog = new Logarithm();
     }
     
     public static Calculator getCalculator(){
@@ -25,7 +20,11 @@ public class Calculator {
         return gestor;
     }
 
-    public Add getAdd() {
+    public Add getOperationAdd() {
         return operationAdd;
+    }
+
+    public Logarithm getOperationLog() {
+        return operationLog;
     }
 }
