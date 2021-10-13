@@ -3,8 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/dylan%20losada/OneDrive/Documentos/NetBeansProjects/calculator-javadabaDu-1.0.0/src/com/calculator/main/Main.java</file>
             <file>file:/C:/Users/dylan%20losada/OneDrive/Documentos/NetBeansProjects/calculator-javadabaDu-1.0.0/test/com/calculator/entities/AddTest.java</file>
+=======
+            <file>file:/C:/Users/Mirna/Desktop/GYL/Calculadora/calculator-javadabaDu-1.0.0/test/com/calculator/entities/AddTest.java</file>
+            <file>file:/C:/Users/Mirna/Desktop/GYL/Calculadora/calculator-javadabaDu-1.0.0/test/com/calculator/entities/SubTest.java</file>
+            <file>file:/C:/Users/Mirna/Desktop/GYL/Calculadora/calculator-javadabaDu-1.0.0/src/com/calculator/entities/Add.java</file>
+>>>>>>> 43659f220b62df73e93aab20d86b845aa7e5a885
         </group>
     </open-files>
 </project-private>

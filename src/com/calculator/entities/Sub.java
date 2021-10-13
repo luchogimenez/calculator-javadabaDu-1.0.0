@@ -13,7 +13,8 @@ public class Sub implements Operation{
 
     @Override
     public Double operate(Double num_1, Double num_2) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         
+        return (num_1-num_2);
     }
     
 }
