@@ -5,7 +5,9 @@
  */
 package com.calculator.entities;
 
+import com.calculator.exceptions.ExceptionByZero;
 import com.calculator.interfaces.Operation;
+import com.calculator.util.Validation;
 
 /**
  *
@@ -14,15 +16,20 @@ import com.calculator.interfaces.Operation;
 public class Root implements Operation{
 
     @Override
-    public Double operate(Double num_1, Double num_2) throws Exception{
-        Double raiz = null;
+    public Double operate(Double radicand, Double index) throws ExceptionByZero{
         try{
-            raiz = Math.pow(num_1,1/num_2);
-        }catch(Exception e){
+            Validation.checkByZero(index);
+            Validation.checkByEvenIndexAndNegativeRadicand(radicand, index);
+        }catch(ExceptionByZero e){
             System.out.println(e.getMessage());
+            throw ExceptionByZero.notRealRoot();
+        }
+        if(radicand<0){
+            return -Math.pow(Math.abs(radicand),(double)(1/index));
+        }else{
+            return Math.pow(radicand,(double)(1/index));
         }
         
-        return raiz;
     }
     
 }
