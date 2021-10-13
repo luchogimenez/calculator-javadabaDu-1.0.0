@@ -1,4 +1,8 @@
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package com.calculator.entities;
 
 import org.junit.After;
@@ -8,9 +12,13 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class LogarithmTest {
+/**
+ *
+ * @author Lucho
+ */
+public class RootTest {
     
-    public LogarithmTest() {
+    public RootTest() {
     }
     
     @BeforeClass
@@ -30,27 +38,20 @@ public class LogarithmTest {
     }
 
     /**
-     * Test of operate method, of class Logarithm.
+     * Test of operate method, of class Root.
      */
     @Test
-    public void testOperate() {
+    public void testOperate() throws Exception {
         System.out.println("operate");
-        Double num_1 = 100d;
-        Double num_2 = 10d;
-        Logarithm instance = new Logarithm();
+        Double num_1 = 4.0;
+        Double num_2 = 2.0;
+        Root instance = new Root();
         Double expResult = 2.0;
+        
         Double result = instance.operate(num_1, num_2);
         assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
     }
     
-    @Test
-    public void testOperateNegative() {
-        System.out.println("operate");
-        Double num_1 = -100.00;
-        Double num_2 = -10.00;
-        Logarithm instance = new Logarithm();
-        Double expResult = 2.00;
-        Double result = instance.operate(num_1, num_2);
-        assertEquals(expResult, result);
-    }
 }
