@@ -7,6 +7,7 @@ public class Calculator {
 
     private static Calculator gestor;
     private Add operationAdd;
+
     private Division operationDivision;
     private Multiplicate operationMultiplicate;
     private Sub operationSub;
@@ -16,6 +17,7 @@ public class Calculator {
         this.operationSub = new Sub();
         this.operationDivision = new Division();
         this.operationMultiplicate = new Multiplicate();
+    
     }
 
     public static Calculator getCalculator() {
@@ -29,6 +31,7 @@ public class Calculator {
         return operationAdd;
     }
 
+
     public Division getOperationDivision() {
         return operationDivision;
     }
@@ -41,4 +44,5 @@ public class Calculator {
         return operationSub;
     }
 }
+
 
