@@ -9,17 +9,18 @@ package com.calculator.exceptions;
  *
  * @author Admin
  */
-public class ExceptionDivision extends Exception {
+public class ExceptionByZero extends Exception {
 
     
-    public ExceptionDivision() {
+    public ExceptionByZero() {
     }
 
     
-    public ExceptionDivision(String msg) {
+    public ExceptionByZero(String msg) {
         super(msg);
     }
-   public static ExceptionDivision divisionByZero(){
-     return  new ExceptionDivision("No se puede dividir por 0");  
+   public static ExceptionByZero divisionByZero(){
+       
+     return  new ExceptionByZero("El denominador no puede ser 0");  
    }
 }
