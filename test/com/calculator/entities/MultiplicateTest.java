@@ -47,13 +47,9 @@ public class MultiplicateTest {
         System.out.println("Se ejecutó Test Multiplicacion de Negativos");
         Double num_1 = -3.0;
         Double num_2 = -7.0;
-<<<<<<< HEAD
-          Double expResult = 2.00;
-=======
-        Double expResult = 21.0;
+        Double expResult = 2.00;
         Double result = instance.operate(num_1, num_2);
         assertEquals(expResult, result);
-
     }
 
     @org.junit.Test
@@ -64,7 +60,6 @@ public class MultiplicateTest {
         Double expResult = -21.0;
         Double result = instance.operate(num_1, num_2);
         assertEquals(expResult, result);
-
     }
 
     @org.junit.Test
@@ -73,9 +68,7 @@ public class MultiplicateTest {
         Double num_1 = 3.0;
         Double num_2 = 0.0;
         Double expResult = 0.0;
->>>>>>> 181978b18df03d0b9190c7d6b4624611024fabc3
         Double result = instance.operate(num_1, num_2);
         assertEquals(expResult, result);
-
     }
 }
