@@ -3,13 +3,7 @@
  */
 package com.calculator.menu;
 
-import com.calculator.entities.Add;
-import com.calculator.entities.Division;
-import com.calculator.entities.Logarithm;
-import com.calculator.entities.Multiplicate;
-import com.calculator.entities.Power;
-import com.calculator.entities.Root;
-import com.calculator.entities.Sub;
+import com.calculator.entities.*;
 import com.calculator.interfaces.Operation;
 import com.calculator.presentacion.Presentation;
 import com.calculator.util.Validation;
@@ -20,13 +14,20 @@ import java.util.Scanner;
 public class Menu {
 
     private Scanner scan = new Scanner(System.in).useDelimiter("\n");
-   List<Operation> operations = Arrays.asList(new Division(), new Add(),
-                new Multiplicate(), new Logarithm(), new Power(), new Root(), new Sub());
+    private List<Operation> operations = Arrays.asList(
+            new Division(),
+            new Add(),
+            new Multiplicate(),
+            new Logarithm(),
+            new Power(),
+            new Root(),
+            new Sub()/*Agregar otras operaciones,*/
+            );
 
-    public void optionMenu() throws Exception {
+    public void optionMenu() {
 
         String opt;
-       
+
         do {
             Presentation.showMenu(operations);
             opt = scan.next();
@@ -34,22 +35,20 @@ public class Menu {
         } while (!Validation.checkIntNumber(opt) || !Validation.checkIsOption(operations.size() + 1, Integer.parseInt(opt)));
 
         if (Integer.parseInt(opt) != (operations.size() + 1)) {
-            Double num1= getNumber();
-            Double num2= getNumber();
-            Operation operation = operations.get(Integer.parseInt(opt)-1);
-        try{
-             Presentation.result(operation.operate(num1, num2));
-        }catch(Exception e){
-            System.out.println(e.getMessage());
-        }
-       
-        
-             
-         
+            Double num1 = getNumber();
+            Double num2 = getNumber();
+            Operation operation = operations.get(Integer.parseInt(opt) - 1);
+            try {
+                Presentation.result(operation.operate(num1, num2));
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+
+            } finally {
+                this.optionMenu();
+            }
         } else {
             Presentation.byeBye();
         }
-
     }
 
     private double getNumber() {

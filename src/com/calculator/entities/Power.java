@@ -20,7 +20,6 @@ public class Power implements Operation {
         try {
             Validation.checkByTwoZeros(base, exponent);
         } catch (ExceptionByZero e) {
-            System.out.println(e.getMessage());
             throw ExceptionByZero.indeterminatedZeroToZero();
         }
         return Math.pow(base, exponent);

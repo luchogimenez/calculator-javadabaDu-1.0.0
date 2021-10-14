@@ -47,7 +47,7 @@ public class MultiplicateTest {
         System.out.println("Se ejecutó Test Multiplicacion de Negativos");
         Double num_1 = -3.0;
         Double num_2 = -7.0;
-        Double expResult = 2.00;
+        Double expResult = 21.00;
         Double result = instance.operate(num_1, num_2);
         assertEquals(expResult, result);
     }

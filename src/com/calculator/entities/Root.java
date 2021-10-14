@@ -21,7 +21,6 @@ public class Root implements Operation {
             Validation.checkByZero(index);
             Validation.checkByEvenIndexAndNegativeRadicand(radicand, index);
         } catch (ExceptionByZero e) {
-            System.out.println(e.getMessage());
             throw ExceptionByZero.notRealRoot();
         }
         if (radicand < 0) {
