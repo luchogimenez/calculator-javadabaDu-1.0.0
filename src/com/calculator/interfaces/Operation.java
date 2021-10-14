@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package com.calculator.interfaces;
-
 public interface Operation {
     Double operate(Double num_1, Double num_2)throws Exception;
+    String getOperation();
 }
