@@ -8,8 +8,10 @@ package com.calculator.main;
 import com.calculator.entities.Calculator;
 
 public class Main {
-    public static void main(String[] args){
-        Calculator calculator = Calculator.getCalculator();
+    public static void main(String[] args) throws Exception{
+        Calculator calcu = Calculator.getCalculator();
+        calcu.showCalculatorMenu();
+        
        // calculator.getAdd().operate(1, 2);
     }
 }

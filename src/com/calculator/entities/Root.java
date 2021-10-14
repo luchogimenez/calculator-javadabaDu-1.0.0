@@ -13,23 +13,27 @@ import com.calculator.util.Validation;
  *
  * @author Lucho
  */
-public class Root implements Operation{
+public class Root implements Operation {
 
     @Override
-    public Double operate(Double radicand, Double index) throws ExceptionByZero{
-        try{
+    public Double operate(Double radicand, Double index) throws ExceptionByZero {
+        try {
             Validation.checkByZero(index);
             Validation.checkByEvenIndexAndNegativeRadicand(radicand, index);
-        }catch(ExceptionByZero e){
-            System.out.println(e.getMessage());
+        } catch (ExceptionByZero e) {
             throw ExceptionByZero.notRealRoot();
         }
-        if(radicand<0){
-            return -Math.pow(Math.abs(radicand),(double)(1/index));
-        }else{
-            return Math.pow(radicand,(double)(1/index));
+        if (radicand < 0) {
+            return -Math.pow(Math.abs(radicand), (double) (1 / index));
+        } else {
+            return Math.pow(radicand, (double) (1 / index));
         }
-        
+
     }
-    
+
+    @Override
+    public String getOperation() {
+        return "Realizar Raiz";
+    }
+
 }

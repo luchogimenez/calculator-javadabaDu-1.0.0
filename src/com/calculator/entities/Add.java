@@ -17,7 +17,7 @@ public class Add implements Operation{
 
     @Override
     public String getOperation() {
-        return "realizar Suma";
+        return "Realizar Suma";
         
     }
 

@@ -54,6 +54,17 @@ public class PowerTest {
         //fail("The test case is a prototype.");
     }
     @Test
+    public void testOperateNegativeExponent() throws Exception {
+        System.out.println("operate");
+        Double base = 4d;
+        Double exponent = -2d;
+        Double expResult = 0.0625d;
+        Double result = instance.operate(base, exponent);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
+    }
+    @Test
     public void testOperateBaseZero() throws Exception {
         System.out.println("operate");
         Double base = 0d;
