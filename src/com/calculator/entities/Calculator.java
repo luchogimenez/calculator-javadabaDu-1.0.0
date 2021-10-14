@@ -1,4 +1,3 @@
-
 package com.calculator.entities;
 
 import com.calculator.entities.Add;
@@ -10,12 +9,15 @@ public class Calculator {
     private Division operationDivision;
     private Multiplicate operationMultiplicate;
     private Sub operationSub;
+    private Logarithm operationLog;
 
     private Calculator() {
         this.operationAdd = new Add();
         this.operationSub = new Sub();
         this.operationDivision = new Division();
         this.operationMultiplicate = new Multiplicate();
+        this.operationLog = new Logarithm();
+
     }
 
     public static Calculator getCalculator() {
@@ -25,8 +27,12 @@ public class Calculator {
         return gestor;
     }
 
-    public Add getAdd() {
+    public Add getOperationAdd() {
         return operationAdd;
+    }
+
+    public Sub getSub() {
+        return operationSub;
     }
 
     public Division getOperationDivision() {
@@ -37,8 +43,7 @@ public class Calculator {
         return operationMultiplicate;
     }
 
-    public Sub getSub() {
-        return operationSub;
+    public Logarithm getOperationLog() {
+        return operationLog;
     }
 }
-

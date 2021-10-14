@@ -5,6 +5,7 @@
  */
 package com.calculator.entities;
 
+import com.calculator.exceptions.ExceptionByZero;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -17,8 +18,9 @@ import static org.junit.Assert.*;
  * @author Lucho
  */
 public class RootTest {
-    
+    Root instance;
     public RootTest() {
+        instance = new Root();
     }
     
     @BeforeClass
@@ -39,19 +41,56 @@ public class RootTest {
 
     /**
      * Test of operate method, of class Root.
+     * @throws java.lang.Exception
      */
     @Test
-    public void testOperate() throws Exception {
+    public void testOperatePositiveRoot() throws Exception {
         System.out.println("operate");
-        Double num_1 = 4.0;
-        Double num_2 = 2.0;
-        Root instance = new Root();
-        Double expResult = 2.0;
+        Double radicand = 4d;
+        Double index = 2d;
+        Double expResult = 2d;
         
-        Double result = instance.operate(num_1, num_2);
+        Double result = instance.operate(radicand, index);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
+    }
+    @Test
+    public void testOperateNegativeRoot() throws Exception {
+        System.out.println("operate");
+        Double radicand = -8d;
+        Double index = 3d;
+        Double expResult = -2d;
+        
+        Double result = instance.operate(radicand, index);
+        System.out.println(result);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
     
+    @Test(expected = ExceptionByZero.class)
+    public void testOperateNotRealRoot() throws Exception {
+        System.out.println("operate");
+        Double radicand = -4d;
+        Double index = 2d;
+        
+        Object expResult = ExceptionByZero.class;
+        Object result = instance.operate(radicand, index);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
+    }
+    @Test(expected = ExceptionByZero.class)
+    public void testOperateIndexZero() throws Exception {
+        System.out.println("operate");
+        Double radicand = 4d;
+        Double index = 0d;
+        
+        Object expResult = ExceptionByZero.class;
+        Object result = instance.operate(radicand, index);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
+    }
 }
