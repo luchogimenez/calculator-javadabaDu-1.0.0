@@ -9,4 +9,10 @@ public class Multiplicate implements Operation {
         return (num_1 * num_2);
     }
 
+    @Override
+    public String getOperation() {
+
+        return "Realizar Multiplicacion";
+    }
+
 }

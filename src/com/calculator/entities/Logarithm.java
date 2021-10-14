@@ -17,5 +17,10 @@ public class Logarithm implements Operation{
        
         return Math.log(num_1) / Math.log(num_2);
     }
+
+    @Override
+    public String getOperation() {
+    return "Realizar Logaritmo";
+    }
     
 }
