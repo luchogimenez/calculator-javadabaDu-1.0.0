@@ -3,14 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-
-            <file>file:/C:/Users/Admin/Desktop/Proyectos%20GYL/calculator-javadabaDu-1.0.0/src/com/calculator/exceptions/ExceptionByZero.java</file>
-            <file>file:/C:/Users/Admin/Desktop/Proyectos%20GYL/calculator-javadabaDu-1.0.0/src/com/calculator/util/Validation.java</file>
-            <file>file:/C:/Users/Admin/Desktop/Proyectos%20GYL/calculator-javadabaDu-1.0.0/test/com/calculator/entities/SubTest.java</file>
-            <file>file:/C:/Users/Admin/Desktop/Proyectos%20GYL/calculator-javadabaDu-1.0.0/test/com/calculator/entities/DivisionTest.java</file>
-            <file>file:/C:/Users/Admin/Desktop/Proyectos%20GYL/calculator-javadabaDu-1.0.0/src/com/calculator/entities/Calculator.java</file>
-            <file>file:/C:/Users/Admin/Desktop/Proyectos%20GYL/calculator-javadabaDu-1.0.0/test/com/calculator/entities/AddTest.java</file>
-            <file>file:/C:/Users/Admin/Desktop/Proyectos%20GYL/calculator-javadabaDu-1.0.0/src/com/calculator/entities/Division.java</file>>>>>>>> main
+            <file>file:/C:/Users/Lucho/Desktop/G&amp;L/calculator-javadabaDu-1.0.0/test/com/calculator/entities/PowerTest.java</file>
+            <file>file:/C:/Users/Lucho/Desktop/G&amp;L/calculator-javadabaDu-1.0.0/test/com/calculator/entities/RootTest.java</file>
+            <file>file:/C:/Users/Lucho/Desktop/G&amp;L/calculator-javadabaDu-1.0.0/src/com/calculator/exceptions/ExceptionByZero.java</file>
+            <file>file:/C:/Users/Lucho/Desktop/G&amp;L/calculator-javadabaDu-1.0.0/src/com/calculator/util/Validation.java</file>
+            <file>file:/C:/Users/Lucho/Desktop/G&amp;L/calculator-javadabaDu-1.0.0/src/com/calculator/entities/Power.java</file>
+            <file>file:/C:/Users/Lucho/Desktop/G&amp;L/calculator-javadabaDu-1.0.0/src/com/calculator/entities/Root.java</file>
         </group>
     </open-files>
 </project-private>
