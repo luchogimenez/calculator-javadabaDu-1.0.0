@@ -20,9 +20,6 @@ public class Validation {
         if (num_1 < 0 || num_2 < 0){
             throw new ExceptionByNegative();
         }
-         
-            
-        }
      }
 
   
