@@ -25,4 +25,9 @@ public class Power implements Operation {
         }
         return Math.pow(base, exponent);
     }
+
+    @Override
+    public String getOperation() {
+        return "Realizar Potencia";
+    }
 }
